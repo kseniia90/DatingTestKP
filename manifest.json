@@ -1,7 +1,7 @@
 {
     "name": "GUCK MAL",
     "short_name": "guck",
-    "start_url": "/index.html",
+    "start_url": "/DatingTestKP/index.html",
     "lang": "de-DE",
     "theme_color": "#3c4a57",
     "display": "standalone",
