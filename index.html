@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- PWA start -->
+	<link rel="manifest" href="./manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="viewport-fit=cover">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-mobile-web-app-title" content="GUCK MAL">
+	<link rel="apple-touch-icon" href="https://kseniia90.github.io/DatingTest/icons/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<script>
+		if ('serviceWorker' in navigator) {
+			if (navigator.serviceWorker.controller) {
+				console.log("ServiceWorker found")
+			} else {
+				navigator.serviceWorker.register("pwabuilder-sw.js", {
+					scope: "./"
+				})
+					.then(() => console.log("ServiceWorker registration successful"))
+					.catch(() => console.log("ServiceWorker registration failed"));
+			}
+		};
+	</script>
+	<!-- PWA end -->
+	<title>GUCK MAL</title>
+	<meta name="description" content="Dating app">
+	<link rel="stylesheet" href="./main.css">
+	<link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/cookieconsent.min.css">
+</head>
+
+<body>
+
+	<div id="box">
+		<div class="top">
+			<h1>guck mal</h1>
+			<h2>Auf dieser Seite kannst du dich noch heute auf ein Traumtreffen mit echten Frauen verabreden.</h2>
+
+			<p class="desc">Lass dir Chance nicht entgehen! <br>
+				Finde private Treffen in deiner Nähe</p>
+		</div>
+
+		<div class="bottom">
+			<div class="steps">
+				<div class="step1">
+					<h3>Erste Frage</h3>
+					<p>Bestätige Sie ihr Alter</p>
+					<ul class="buttons">
+						<li><a href="javascript:void(0)" class="btn" rel="2">50+</a></li>
+						<li onclick="window.location.href='https://www.google.com'"><a href="https://www.google.com"
+								class="btn" rel="2">18-45</a></li>
+					</ul>
+				</div><!--//step1-->
+
+				<div class="step2">
+					<h3>zweite Frage</h3>
+					<p>Möchten Sie eine aufrichtige Beziehung?</p>
+					<ul class="buttons">
+						<li><a href="javascript:void(0)" class="btn" rel="3">Ja</a></li>
+						<li onclick="window.location.href='https://www.google.com'"><a href="https://www.google.com"
+								class="btn" rel="3">NEIN</a></li>
+					</ul>
+				</div><!--//step2-->
+
+				<div class="step3">
+					<h3>dritte Frage</h3>
+					<p>Werden Sie alle mit Respekt behandeln?</p>
+					<ul class="buttons">
+						<li><a href="javascript:void(0)" class="btn" rel="4">Ja</a></li>
+						<li onclick="window.location.href='https://www.google.com'"><a href="https://www.google.com"
+								class="btn" rel="4">NEIN</a></li>
+					</ul>
+				</div><!--//step3-->
+
+				<div class="step4">
+					<h3>Ihre Antworten werden bearbeitet</h3>
+					<ul class="processing">
+						<li class="number1"><span class="highlight"></span> Verarbeitet!</li>
+						<li class="number2"><span class="highlight">Viele</span> aktive Benutzer</li>
+						<li class="number3"><span class="highlight">10+</span> singles vielleicht jetzt online</li>
+						<li class="number4">Sie können die Registrierung fortsetzen</li>
+					</ul>
+					<span class="loading"><img src="./img/load.gif" alt=""></span>
+					<a href="https://ukraine.ua/cities-places/the-carpathian-mountains/" class="btnBig"
+						rel="submitForm">Weiter!</a>
+				</div><!--//step4-->
+			</div>
+		</div>
+	</div>
+
+	<!-- Registrierung popup -->
+
+	<div class="sign-up_popup">
+		<div class="sign-up_popup-dialog">
+			<div class="sign-up_popup-content sign-up_popup-box">
+				<div class="sign-up_popup-header">
+					<h3>Die Registrierung ist jetzt geöffnet!</h3>
+				</div>
+				<div class="sign-up_popup-body">
+					<div id="time">10:00</div>
+
+					<ul class="buttons">
+						<li><a href="#" class="btn anmelden-btn" rel="4">Anmelden</a></li>
+						<li><a href="#" class="btn" rel="close-sign-up_popup">Nein, danke</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/jquery_002.js"></script>
+	<script type="text/javascript" src="./js/jquery-migrate.js"></script>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/custom.js"></script><!--//custom jquery-->
+	<script type="text/javascript">window.hasMobileFirstExtension = true;</script>
+	<script src="./js/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+		window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+					"background": "#000"
+				},
+				"button": {
+					"background": "#f1d600"
+				}
+			},
+			"content": {
+				"message": "Diese Website verwendet Cookies, um Ihnen die bestmögliche Funktionalität bieten zu können.",
+				"dismiss": "Habe es!",
+				"link": "Erfahren Sie mehr",
+				"href": "/privacy.html"
+			}
+		});
+	</script>
+</body>
+
+</html>
